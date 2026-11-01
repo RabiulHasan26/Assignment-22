@@ -1,0 +1,282 @@
+/* Global CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8fafc;
+  color: #334155;
+}
+
+/* Navbar */
+
+.navbar {
+  background-color: #1e293b;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.navbar h2 {
+  font-size: 24px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #38bdf8;
+}
+
+/* Home Page */
+
+.home-container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 12px;
+  transition: background-color 0.3s;
+}
+
+.home-container h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #1e293b;
+}
+
+.home-container h2 {
+  margin: 20px 0;
+  color: #1e293b;
+}
+
+.home-container h3 {
+  margin: 15px 0;
+}
+
+.home-container p {
+  margin: 10px 0;
+}
+
+.home-container input {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.home-container input:focus {
+  outline: 2px solid #93c5fd;
+  border-color: #2563eb;
+}
+
+.home-container button {
+  padding: 10px 18px;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.home-container button:hover {
+  background-color: #1d4ed8;
+}
+
+.home-container hr {
+  margin: 25px 0;
+  border: 1px solid #e2e8f0;
+}
+
+.user-info {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #e0f2fe;
+  border-radius: 8px;
+}
+
+.home-container ul {
+  padding-left: 30px;
+}
+
+.home-container li {
+  margin: 8px 0;
+}
+
+/* Users Page */
+
+.users-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.users-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1e293b;
+}
+
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.user-card {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.user-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.user-card h2 {
+  margin-bottom: 12px;
+  color: #1e293b;
+}
+
+.user-card p {
+  margin-bottom: 15px;
+  word-break: break-word;
+}
+
+.user-card a {
+  display: inline-block;
+  background-color: #2563eb;
+  color: white;
+  padding: 9px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.user-card a:hover {
+  background-color: #1d4ed8;
+}
+
+/* Loading and Error */
+
+.loading,
+.error {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.error {
+  color: #dc2626;
+}
+
+/* About Page */
+
+.about-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.about-container h1 {
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+.about-container p {
+  line-height: 1.8;
+  margin: 15px 0;
+}
+
+.about-container a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 18px;
+  background-color: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+/* User Details */
+
+.about-container h2 {
+  margin: 20px 0;
+  color: #2563eb;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 18px 20px;
+  }
+
+  .user-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-container {
+    margin: 15px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .user-list {
+    grid-template-columns: 1fr;
+  }
+
+  .users-container {
+    padding: 15px;
+  }
+
+  .home-container h1 {
+    font-size: 24px;
+  }
+}
